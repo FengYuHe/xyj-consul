@@ -1,4 +1,5 @@
 const Consul = require('consul');
+const util = require('./lib/util');
 
 class ConsulService {
   constructor(opts){
@@ -29,10 +30,6 @@ class ConsulService {
    * @param cb
    */
   register(opts, cb) {
-    if (!cb) {
-      cb = opts;
-      opts = {};
-    }
     const option = {
       name: opts.name,
       tags: opts.tags || [],
@@ -41,7 +38,7 @@ class ConsulService {
     };
     this.consul.agent.service.register(option, (err, result) => {
       if (err)  throw err;
-      cb(err, result);
+      cb && cb(err, result);
     });
   }
 
@@ -51,6 +48,16 @@ class ConsulService {
    */
   list(cb) {
     this.consul.agent.service.list(cb);
+  }
+
+  /**
+   * 格式化service list，使其适用于web层
+   * @param cb
+   */
+  listFormat(cb){
+    this.consul.agent.service.list((err, res) => {
+      cb && cb(err, util.format(res));
+    });
   }
 
   /**
