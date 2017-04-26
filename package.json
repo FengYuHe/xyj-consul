@@ -1,0 +1,27 @@
+{
+  "name": "xyj-consul",
+  "version": "0.0.1",
+  "description": "smart sport consul service",
+  "main": "index.js",
+  "dependencies": {
+    "consul": "^0.28.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xunyijia/xyj-consul.git"
+  },
+  "keywords": [
+    "consul",
+    "register"
+  ],
+  "author": "FengYuHe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xunyijia/xyj-consul/issues"
+  },
+  "homepage": "https://github.com/xunyijia/xyj-consul#readme"
+}
