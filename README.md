@@ -13,7 +13,7 @@ $ npm install --save xyj-consul
 ```js
 const Consul = require('xyj-consul');
 
-const consul = new Consul({host: 127.0.0.1, port: 8500}); // default: host-127.0.0.1, port-8500
+const consul = new Consul({host: '127.0.0.1', port: 8500}); // default: host-127.0.0.1, port-8500
 ```
 
 服务注册：
@@ -135,3 +135,9 @@ Result
 ### consul.consul
 
 直接返回[node-consul](https://github.com/silas/node-consul)实例
+
+## TODO
+* all
+
+## License
+@MIT
