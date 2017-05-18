@@ -1,6 +1,6 @@
 {
   "name": "xyj-consul",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "smart sport consul service",
   "main": "index.js",
   "dependencies": {
