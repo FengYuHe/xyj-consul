@@ -34,7 +34,7 @@ class ConsulService {
       name: opts.name,
       tags: opts.tags || [],
       address: opts.address || '127.0.0.1',
-      port: opts.addressPort || opts.port,
+      port: opts.servicePort || opts.port,
     };
     this.consul.agent.service.register(option, (err, result) => {
       if (err)  throw err;
